@@ -1,0 +1,13 @@
+version "3"
+
+services:
+  simple_project:
+    image: nginx:latest
+    container_name: simple-project
+    volumes:
+      - ~/simple-project/index.html:/usr/share/nginx/html
+    ports:
+      - 80:80
+    restart: always
+
+
