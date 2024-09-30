@@ -6,6 +6,11 @@ import { Cat, Dog } from '@prisma/client';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('/')
+  get(): string {
+    return 'Hello world';
+  }
+
   @Get('voting')
   getVoting(): Promise<{
     dogVoting: Dog;
